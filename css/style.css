@@ -42,6 +42,29 @@ body {
 ul {
     margin: 0;
 }
+.logo {
+    vertical-align: middle;
+}
 img {
-    vertical-align: -14px;
+    vertical-align: middle;
+}
+nav {
+    padding: 10px;
+}
+nav li {
+    display: inline-block;
+}
+nav li:first-child {
+    text-align: left;
+    margin-right: auto;
+}
+.tab {
+    margin-left: 12%;
+}
+h1, h2 {
+    margin: 0;
+    display: inline-block;
+}
+nav li h1 {
+    width: fit-content;
 }
