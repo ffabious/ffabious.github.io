@@ -68,9 +68,17 @@
         Homework 2 Section
     </h2>
     <br>
-    <button class="tab cool-btn" id="fetch-btn" style="margin-top: 1%;">
+    <div style="display: flex; align-items: center; width: 30%; justify-content: space-between;" class="tab">
+    <button class="cool-btn" id="fetch-btn" style="margin-top: 1%">
         Run Script
     </button>
+    <form method="get" id="type-form">
+        <label>
+            Enter email:
+        </label>
+        <input type="email" name="email" id="emailForm" required>
+    </form>
+    </div>
     <p id="fetch-title"></p>
     <p id="fetch-image"></p>
     <p id="fetch-date"></p>
@@ -80,6 +88,7 @@
         const title = document.getElementById('fetch-title')
         const image = document.getElementById('fetch-image')
         const date = document.getElementById('fetch-date')
+        const typeForm = document.getElementById('type-form')
         const options = {
             weekday: 'long',
             year: 'numeric',
@@ -87,19 +96,25 @@
             day: 'numeric',
         }
 
-        function fetchInitialData() {
-            return fetch('https://fwd.innopolis.university/api/hw2?email=k.greshnov@innopolis.university').then(r => r.json())
+        function fetchInitialData(emailText) {
+            const params = new URLSearchParams()
+            params.append('email', emailText)
+            return fetch('https://fwd.innopolis.university/api/hw2?' + params.toString()).then(r => r.json())
         }
 
         function fetchComicData(receivedId) {
-            return fetch('https://fwd.innopolis.university/api/comic?id=' + receivedId).then(r => r.json())
+            const params = new URLSearchParams()
+            params.append('id', receivedId)
+            return fetch('https://fwd.innopolis.university/api/comic?' + params.toString()).then(r => r.json())
         }
 
         runBtn.addEventListener('click', async function (e) {
-            title.textContent = ''
+            try {
+                title.textContent = ''
             image.innerHTML = ''
             date.textContent = ''
-            const comicId = await fetchInitialData()
+            const emailData = typeForm.elements.email.value
+            const comicId = await fetchInitialData(emailData)
             console.log(comicId);
             const result = await fetchComicData(comicId)
             console.log(result);
@@ -110,6 +125,9 @@
             image.appendChild(imageEl)
             const dateEl = new Date(Date.UTC(result.year, result.month, result.day, 0, 0, 0))
             date.textContent = dateEl.toLocaleDateString(undefined, options)
+            } catch (err) {
+                title.textContent = err
+            }
         })
     </script>
 </body>
