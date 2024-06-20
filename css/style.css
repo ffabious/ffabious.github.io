@@ -11,7 +11,7 @@
     color: #ffc800;
     transition: all .5s;
 }
-.font-about-name {
+.font-section-name {
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -19,12 +19,13 @@
     color: azure;
 }
 
-.font-about-text {
+.font-section-text {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: azure;
+  font-size: large;
 }
   
 header {
@@ -49,6 +50,23 @@ header {
 }
 li {
     list-style-type: none;
+}
+.cool-btn {
+    font-family: "Concert One", sans-serif;
+    text-align: center;
+    background-color: azure;
+    font-size: 1.2rem;
+    line-height: 2.5;
+    font-weight: lighter;
+    border-radius: 10px;
+    border-color: #ffc800;
+    padding: 1rem;
+
+}
+.cool-btn:hover {
+    transition: all .2s;
+    cursor: pointer;
+    background-color: #ffd951;
 }
 body {
     background-color: rgb(164, 97, 227);
@@ -107,4 +125,25 @@ nav li h1 {
 #email:hover {
     vertical-align: 20%;
     transition: all .2s;
+}
+#fetch-title {
+    font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: azure;
+  font-size: large;
+    margin-left: 20%;
+}
+#fetch-image {
+    margin-left: 20%;
+}
+#fetch-date {
+    font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: azure;
+  font-size: large;
+    margin-left: 20%;
 }

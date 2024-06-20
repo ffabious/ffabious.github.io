@@ -44,12 +44,13 @@
             </ul>
         </nav>
     </header>
-    <h2 class="font-about-name tab" style="margin-top: 5%;">
+    <h2 class="font-section-name tab" style="margin-top: 5%;">
         About me
     </h2>
-    <div class="tab font-about-text" style="margin-top: 1%;">
-        I'm a current Computer Science student at Innopolis University.<br>
-        I code in C++ and Python, and I'm particularly interested in Artificial Intelligence and Data Science.
+    <div class="tab font-section-text" style="margin-top: 1%;">
+        I'm a Computer Science student at Innopolis University.<br>
+        I code in C++ and Python, and I'm particularly interested in Artificial Intelligence and Data Science. <br>
+        Currently, I'm studying HTML, CSS and JS.
     </div>
     <!-- <button class="texter">
         Yomayo
@@ -63,5 +64,53 @@
         }
         document.querySelector('button').onclick = onClickEvent;
     </script> -->
+    <h2 class="font-section-name tab" style="margin-top: 5%;">
+        Homework 2 Section
+    </h2>
+    <br>
+    <button class="tab cool-btn" id="fetch-btn" style="margin-top: 1%;">
+        Run Script
+    </button>
+    <p id="fetch-title"></p>
+    <p id="fetch-image"></p>
+    <p id="fetch-date"></p>
+
+    <script>
+        const runBtn = document.getElementById('fetch-btn')
+        const title = document.getElementById('fetch-title')
+        const image = document.getElementById('fetch-image')
+        const date = document.getElementById('fetch-date')
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        }
+
+        function fetchInitialData() {
+            return fetch('https://fwd.innopolis.university/api/hw2?email=k.greshnov@innopolis.university').then(r => r.json())
+        }
+
+        function fetchComicData(receivedId) {
+            return fetch('https://fwd.innopolis.university/api/comic?id=' + receivedId).then(r => r.json())
+        }
+
+        runBtn.addEventListener('click', async function (e) {
+            title.textContent = ''
+            image.innerHTML = ''
+            date.textContent = ''
+            const comicId = await fetchInitialData()
+            console.log(comicId);
+            const result = await fetchComicData(comicId)
+            console.log(result);
+            title.textContent = result.safe_title
+            let imageEl = document.createElement('img')
+            imageEl.src = result.img
+            imageEl.alt = result.alt
+            image.appendChild(imageEl)
+            const dateEl = new Date(Date.UTC(result.year, result.month, result.day, 0, 0, 0))
+            date.textContent = dateEl.toLocaleDateString(undefined, options)
+        })
+    </script>
 </body>
 </html>
