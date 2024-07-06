@@ -7,6 +7,7 @@ const nextConfig = {
             "imgs.xkcd.com",
         ],
         path: "/",
+        unoptimized: true,
     }
 };
 
