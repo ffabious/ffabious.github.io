@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const FooterBlock: React.FC = () => {
     return (
@@ -7,19 +8,19 @@ const FooterBlock: React.FC = () => {
                 <ul>
                     <li>
                         <a href="https://t.me/didukyril" id="tg-link">
-                            <img src="https://img.icons8.com/?size=100&id=9R1sV3QvY18K&format=png&color=ffc800"
+                            <Image src="https://img.icons8.com/?size=100&id=9R1sV3QvY18K&format=png&color=ffc800"
                                 alt="Telegram" width="40" height="40" />
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/ffabious" id="gh-link">
-                            <img src="https://img.icons8.com/?size=100&id=12598&format=png&color=ffc800" alt="GitHub"
+                            <Image src="https://img.icons8.com/?size=100&id=12598&format=png&color=ffc800" alt="GitHub"
                                 width="40" height="40" />
                         </a>
                     </li>
                     <li>
                         <a href="mailto:k.greshnov@innopolis.university" id="email">
-                            <img src="https://img.icons8.com/?size=100&id=124377&format=png&color=ffc800" alt="Email"
+                            <Image src="https://img.icons8.com/?size=100&id=124377&format=png&color=ffc800" alt="Email"
                                 width="40" height="40" />
                         </a>
                     </li>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { format } from "../../node_modules/date-fns/format";
 
 interface Comic {
@@ -46,7 +47,7 @@ const ComicBlock: React.FC = async () => {
                 <p id="fetch-title">
                     {comic.safe_title}
                 </p>
-                <img src={comic.img} alt={comic.alt} id="fetch-image" />
+                <Image src={comic.img} alt={comic.alt} id="fetch-image" />
                 <p id="fetch-date">
                     {date}
                 </p>

@@ -7,9 +7,9 @@ const BioBlock: React.FC = () => {
                 About me
             </h2>
             <div className="font-section-text tab" style={{ marginTop: "1%" }}>
-                I'm a Computer Science student at Innopolis University.<br />
-                I code in C++ and Python, and I'm particularly interested in Artificial Intelligence and Data Science. <br />
-                Currently, I'm studying Front-end Web Development, which this website is done for =P.
+                I&apos;m a Computer Science student at Innopolis University.<br />
+                I code in C++ and Python, and I&apos;m particularly interested in Artificial Intelligence and Data Science. <br />
+                Currently, I&apos;m studying Front-end Web Development, which this website is done for =P.
             </div>
         </div>
     );
