@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import logo from "../../public/logoIcon.png"
+import comic from "../../public/comicIcon.png"
+
 
 const HeaderBlock: React.FC = () => {
   return (
@@ -10,7 +13,7 @@ const HeaderBlock: React.FC = () => {
             <h1><a href="/" style={{ textDecoration: "none" }} className="logo-text">
               <span className="logo font-logo">
                 <Image className="logo"
-                  src="https://img.icons8.com/?size=100&id=sXm12ie1GUjg&format=png&color=ffc800"
+                  src={logo}
                   alt="Logo Icon" height="48" width="48" />
                 Kirill Greshnov
               </span>
@@ -21,7 +24,7 @@ const HeaderBlock: React.FC = () => {
             <h1><a href="/comic" style={{ textDecoration: "none" }} className="logo-text">
               <span className="logo font-logo">
                 <Image className="logo"
-                  src="https://img.icons8.com/?size=100&id=Bau6M9xR1HkV&format=png&color=ffc800"
+                  src={comic}
                   alt="Comic Icon" height="36" width="36" />
                 Comic
               </span>

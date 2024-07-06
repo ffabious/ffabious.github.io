@@ -47,7 +47,8 @@ const ComicBlock: React.FC = async () => {
                 <p id="fetch-title">
                     {comic.safe_title}
                 </p>
-                <Image src={comic.img} alt={comic.alt} id="fetch-image" />
+                <Image src={comic.img} alt={comic.alt} id="fetch-image" width="1000" height="1000"
+                    style={{ width: "25%", height: "auto" }} />
                 <p id="fetch-date">
                     {date}
                 </p>

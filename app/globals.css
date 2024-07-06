@@ -49,6 +49,7 @@ footer {
     margin: 0%;
     justify-content: center;
     bottom: 0;
+    /* padding-top: 1em; */
 }
 
 .texter {
@@ -132,38 +133,38 @@ nav li h1 {
 }
 
 #tg-link {
-    bottom: 0;
-    vertical-align: 0;
+    /* bottom: 0; */
+    vertical-align: -100%;
     transition: all .5s;
 }
 
 #tg-link:hover {
-    bottom: 0;
-    vertical-align: 20%;
+    /* bottom: 0; */
+    vertical-align: -50%;
     transition: all .2s;
 }
 
 #gh-link {
-    bottom: 0;
-    vertical-align: 0%;
+    /* bottom: 0; */
+    vertical-align: -100%;
     transition: all .2s;
 }
 
 #gh-link:hover {
-    bottom: 0;
-    vertical-align: 20%;
+    /* bottom: 0; */
+    vertical-align: -50%;
     transition: all .2s;
 }
 
 #email {
-    bottom: 0;
-    vertical-align: 0%;
+    /* bottom: 0; */
+    vertical-align: -100%;
     transition: all .2s;
 }
 
 #email:hover {
     bottom: 0;
-    vertical-align: 20%;
+    vertical-align: -50%;
     transition: all .2s;
 }
 
