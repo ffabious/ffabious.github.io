@@ -32,7 +32,7 @@ const ComicBlock: React.FC = async () => {
     const comic = await fetchComicData(id);
 
     if (!comic) {
-        return <div id="fetch-title">Comic wasn't received</div>
+        return <div id="fetch-title">Comic wasn&apos;t received</div>
     }
 
     const date = format(new Date(comic.year, comic.month, comic.day), "MMM d, y");
