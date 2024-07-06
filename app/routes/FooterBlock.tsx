@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import telegram from "../../public/telegramIcon.png"
-import gh from "../../public/ghIcon.png"
-import email from "../../public/emailIcon.png"
+import telegram from "../img/telegramIcon.png"
+import gh from "../img/ghIcon.png"
+import email from "../img/emailIcon.png"
 
 const FooterBlock: React.FC = () => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../public/logoIcon.png"
-import comic from "../../public/comicIcon.png"
+import logo from "../img/logoIcon.png"
+import comic from "../img/comicIcon.png"
 
 
 const HeaderBlock: React.FC = () => {
