@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "standalone",
+    output: "out",
     reactStrictMode: true,
     images: {
         domains: [
             "imgs.xkcd.com",
-        ]
+        ],
+        path: "/",
     }
 };
 
