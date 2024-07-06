@@ -12,12 +12,6 @@ interface Comic {
     safe_title: string;
 }
 
-// const options = {
-//     year: 'number',
-//     month: 'long',
-//     day: 'number',
-// }
-
 const fetchInitialData = async (): Promise<number> => {
     const params = new URLSearchParams({
         'email': 'k.greshnov@innopolis.university',
@@ -32,18 +26,9 @@ const fetchComicData = async (receivedId: number): Promise<Comic> => {
     return await fetch('https://fwd.innopolis.university/api/comic?' + params.toString()).then(r => { return r.json() });
 }
 
-const ComicBlock: React.FC = () => {
-    const [comic, setComic] = useState<Comic | null>(null);
-
-    useEffect(() => {
-        const fetch = async () => {
-            const id = await fetchInitialData();
-            const comicData = await fetchComicData(id);
-            setComic(comicData);
-        };
-
-        fetch();
-    }, []);
+const ComicBlock: React.FC = async () => {
+    const id = await fetchInitialData();
+    const comic = await fetchComicData(id);
 
     if (!comic) {
         return <div id="fetch-title">Comic wasn't received</div>
@@ -54,7 +39,7 @@ const ComicBlock: React.FC = () => {
     return (
         <div>
             <h2 className="font-section-name tab" style={{ marginTop: "5%" }}>
-                Homeworks 2-3 Section
+                Comic Section
             </h2>
             <br />
             <div className="fetch-comic">

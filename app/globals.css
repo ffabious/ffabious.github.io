@@ -1,4 +1,4 @@
-/* .font-logo {
+.font-logo {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -37,6 +37,18 @@ header {
     top: 0%;
     margin: 0%;
     padding: 1px;
+}
+
+footer {
+    min-height: 4em;
+    display: flex;
+    color: azure;
+    background-color: blueviolet;
+    position: fixed;
+    min-width: 100%;
+    margin: 0%;
+    justify-content: center;
+    bottom: 0;
 }
 
 .texter {
@@ -84,18 +96,16 @@ body {
 
 ul {
     margin: 0;
+    padding-inline-start: 0%;
 }
 
 .logo {
     vertical-align: middle;
+    /* padding-inline-start: 1%; */
 }
 
 img {
     vertical-align: middle;
-}
-
-nav {
-    padding: 10px;
 }
 
 nav li {
@@ -122,31 +132,37 @@ nav li h1 {
 }
 
 #tg-link {
+    bottom: 0;
     vertical-align: 0;
-    transition: all .2s;
+    transition: all .5s;
 }
 
 #tg-link:hover {
+    bottom: 0;
     vertical-align: 20%;
     transition: all .2s;
 }
 
 #gh-link {
-    vertical-align: 0;
+    bottom: 0;
+    vertical-align: 0%;
     transition: all .2s;
 }
 
 #gh-link:hover {
+    bottom: 0;
     vertical-align: 20%;
     transition: all .2s;
 }
 
 #email {
-    vertical-align: 0;
+    bottom: 0;
+    vertical-align: 0%;
     transition: all .2s;
 }
 
 #email:hover {
+    bottom: 0;
     vertical-align: 20%;
     transition: all .2s;
 }
@@ -173,4 +189,4 @@ nav li h1 {
     color: azure;
     font-size: large;
     margin-left: 20%;
-} */
+}
