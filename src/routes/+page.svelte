@@ -2,6 +2,8 @@
 	import '../app.css';
 </script>
 
+<title>About | Kirill's Website</title>
+
 <h2 class="mt-[5%] ml-[20%] font-ConcertOne font-medium not-italic text-5xl text-logomain">
 	About me
 </h2>

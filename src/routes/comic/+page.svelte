@@ -7,6 +7,8 @@
 	});
 </script>
 
+<title>Comic | Kirill's Website</title>
+
 {#if comic !== null}
 	<h2 class="mt-[5%] ml-[20%] font-ConcertOne font-medium not-italic text-5xl text-logomain">
 		Comic Section
